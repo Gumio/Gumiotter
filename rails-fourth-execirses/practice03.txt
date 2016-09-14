@@ -1,0 +1,10 @@
+//ハッシュを作る練習問題
+
+person1 = { first: "Hogeta", last: "Fugao" }
+person2 = { first: "Soushi", last: "Yamanaka"}
+person3 = { first: "Foo", last: "Bar"}
+
+params = {}
+params[:father] = person1
+params[:mother] = person2
+params[:child] = person3
