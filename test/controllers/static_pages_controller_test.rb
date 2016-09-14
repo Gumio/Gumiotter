@@ -20,7 +20,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get contact" do
-    get :contact
+    get static_pages_contact_url
     assert_response :success
     assert_select "title", "Contact | Ruby on Rails Tutorial Sample App"
   end
