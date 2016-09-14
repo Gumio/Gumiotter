@@ -1,12 +1,14 @@
-class User
-  attr_accessor :name, :email
+#class User
+  #これはsetterとgetterを作成してくれる
+  #attr_accessor :name, :email
 
-  def initialize(attributes = {})
-    @name = attributes[:name]
-    @email = attributes[:email]
-  end
+  #initializeはnewされた時に最初に呼び出される
+  #def initialize(attributes = {})
+    #@name = attributes[:name]
+    #@email = attributes[:email]
+  #end
 
-  def formatted_email
-    "#{@name} <#{@email}"
-  end
-end
+  #def formatted_email
+    #{}"#{@name} <#{@email}"
+  #end
+#end
