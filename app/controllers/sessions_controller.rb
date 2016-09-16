@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     #trueが返ってくるんだよ
     user = User.find_by(email: params[:session][:email].downcase)
-    if user && use.authenticate(params[:session][:password])
+    if user && user.authenticate(params[:session][:password])
       #ユーザログイン後にユーザ情報のページにリダイレクトする
       log_in user
       redirect_to user
