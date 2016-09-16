@@ -22,6 +22,7 @@ module SessionsHelper
         @current_user = user
       end
     end
+  end
 
   # ユーザーがログインしていればtrue、その他ならfalseを返す
   def logged_in?
