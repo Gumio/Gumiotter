@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     else
       #エラーメッセージを作成する
       flash[:danger] = 'Invalid email/password combination'
-      rendre 'new'
+      render 'new'
     end
   end
 
