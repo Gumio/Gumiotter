@@ -4,7 +4,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    render 'new'
+    #trueが返ってくるんだよ
+    user = User.find_by(email: params[:session][:email].downcase)
+    if user && use.authenticate(params[:session][:password])
+      #ユーザログイン後にユーザ情報のページにリダイレクトする
+    else
+      #エラーメッセージを作成する
+      rendre 'new'
+    end
   end
 
   def destroy
