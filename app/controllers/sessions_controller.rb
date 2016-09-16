@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
       #ユーザログイン後にユーザ情報のページにリダイレクトする
     else
       #エラーメッセージを作成する
+      flash[:danger] = 'Invalid email/password combination'
       rendre 'new'
     end
   end
