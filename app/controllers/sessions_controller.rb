@@ -10,7 +10,6 @@ class SessionsController < ApplicationController
       #ユーザログイン後にユーザ情報のページにリダイレクトする
       log_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      remember user
       redirect_to user
     else
       #エラーメッセージを作成する
