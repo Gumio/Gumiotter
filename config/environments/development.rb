@@ -27,8 +27,10 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
-
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :test
+  host = '0.0.0.0:3000'
+  config.action_mailer.default_url_options = { host: host }
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
@@ -44,11 +46,6 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
-
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :test
-  host = '0.0.0.0:3000'
-  config.action_mailer.default_url_options = { host: host }
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
