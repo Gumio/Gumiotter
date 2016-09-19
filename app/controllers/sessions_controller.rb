@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     #trueが返ってくるんだよ
     @user = User.find_by(email: params[:session][:email].downcase)
     if @user && @user.authenticate(params[:session][:password])
-      if user.activated?
+      if @user.activated?
         #ユーザログイン後にユーザ情報のページにリダイレクトする
         log_in @user
         params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
