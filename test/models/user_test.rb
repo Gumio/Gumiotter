@@ -8,8 +8,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "should be valid" do
-    binding.pry
-     assert @user.valid?
+    assert @user.valid?
   end
 
   test "name should be present" do
@@ -92,6 +91,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not hogeo.following?(foobar)
     hogeo.follow(foobar)
     assert hogeo.following?(foobar)
+    assert foobar.followers.include?(hogeo)
     hogeo.unfollow(foobar)
     assert_not hogeo.following?(foobar)
   end
