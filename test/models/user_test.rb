@@ -85,4 +85,14 @@ class UserTest < ActiveSupport::TestCase
       @user.destroy
     end
   end
+
+  test "should follow and unfollow a user" do
+    hogeo = users(:hogeo)
+    foobar  = users(:foobar)
+    assert_not hogeo.following?(foobar)
+    hogeo.follow(foobar)
+    assert hogeo.following?(foobar)
+    hogeo.unfollow(foobar)
+    assert_not hogeo.following?(foobar)
+  end
 end
