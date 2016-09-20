@@ -8,6 +8,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "should be valid" do
+    binding.pry
      assert @user.valid?
   end
 
