@@ -18,7 +18,7 @@ most_recent:
   created_at: <%= Time.zone.now %>
   user: hogeo
 
-<% 30.times do |n| %>
+<% 50.times do |n| %>
 micropost_<%= n %>:
   content: <%= Faker::Lorem.sentence(5) %>
   created_at: <%= 42.days.ago %>
