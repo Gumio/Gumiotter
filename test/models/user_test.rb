@@ -102,11 +102,11 @@ class UserTest < ActiveSupport::TestCase
     lana    = users(:lana)
     # フォローしているユーザーの投稿を確認
     lana.microposts.each do |post_following|
-      assert michael.feed.include?(post_following)
+      assert hogeo.feed.include?(post_following)
     end
     # 自分自身の投稿を確認
-    michael.microposts.each do |post_self|
-      assert michael.feed.include?(post_self)
+    hogeo.microposts.each do |post_self|
+      assert hogeo.feed.include?(post_self)
     end
     # フォローしていないユーザーの投稿を確認
     archer.microposts.each do |post_unfollowed|
