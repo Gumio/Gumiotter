@@ -3,8 +3,6 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   private
 
-  def hello
-    render text: "¡Hola, mundo!"
   # ユーザーのログインを確認する
   def logged_in_user
     unless logged_in?
@@ -13,9 +11,4 @@ class ApplicationController < ActionController::Base
       redirect_to login_url
     end
   end
-
-  def goodbye
-    render text: "goodbye, world!!"
-  end
-
 end
