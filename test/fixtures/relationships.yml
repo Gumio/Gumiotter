@@ -1,0 +1,15 @@
+one:
+  follower: hogeo
+  followed: lana
+
+two:
+  follower: hogeo
+  followed: mallory
+
+three:
+  follower: lana
+  followed: hogeo
+
+four:
+  follower: archer
+  followed: hogeo
